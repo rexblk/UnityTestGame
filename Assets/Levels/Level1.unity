@@ -301,6 +301,7 @@ GameObject:
   - component: {fileID: 1236048272}
   - component: {fileID: 1236048271}
   - component: {fileID: 1236048270}
+  - component: {fileID: 1236048274}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -371,6 +372,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 62.422005, y: 0, z: 0}
+--- !u!114 &1236048274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1236048269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4f3a79f110839e4f85f777868be841f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1252359725
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,6 +527,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 20
   maxSpeed: 10
+  DeathParticles: {fileID: 1965334950173352, guid: 4c2536ce0abfe874d8e3c0ad9ce6c349,
+    type: 2}
 --- !u!114 &1644510533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,8 +540,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ecd98f471d633d489639d9e622823f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DeathParticles: {fileID: 1965334950173352, guid: 4c2536ce0abfe874d8e3c0ad9ce6c349,
-    type: 2}
 --- !u!114 &1644510534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -603,9 +615,10 @@ GameObject:
   - component: {fileID: 1726959133}
   - component: {fileID: 1726959132}
   - component: {fileID: 1726959131}
+  - component: {fileID: 1726959135}
   m_Layer: 0
   m_Name: Goal
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -652,7 +665,7 @@ BoxCollider:
   m_GameObject: {fileID: 1726959130}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -676,6 +689,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1726959135
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1726959130}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1917024548
 GameObject:
   m_ObjectHideFlags: 0
